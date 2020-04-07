@@ -1,4 +1,4 @@
-const n = 10;
+const n = 123;
 
 const answer = fib(n);
 
@@ -33,14 +33,6 @@ function fib(n) {
     return memo[n].b;
 }
 
-function calculate_steps(path) {
-    const steps = [];
-    for (let i = 1; i < path.length; i++) {
-	steps.push( path[i] - path[i - 1] );
-    }
-    return steps;
-}
-
 function calculate_path(n) {
     const path = [n];
     while ( n > 1 || n < - 1 ) {
@@ -49,6 +41,14 @@ function calculate_path(n) {
 	path.push(n);
     }
     return path.reverse();
+}
+
+function calculate_steps(path) {
+    const steps = [];
+    for (let i = 1; i < path.length; i++) {
+	steps.push( path[i] - path[i - 1] );
+    }
+    return steps;
 }
 
 function is_even(n) {
