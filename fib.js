@@ -1,4 +1,6 @@
-const n = 123;
+'use strict';
+
+const n = 69;
 
 const answer = fib(n);
 
