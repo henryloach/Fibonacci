@@ -44,9 +44,13 @@ function calculate_steps(path) {
 function calculate_path(n) {
     const path = [n];
     while ( n > 1 || n < - 1 ) {
-	if ( !n % 2 ) n /= 2;
+	if ( is_even(n) ) n /= 2;
 	else n > 0 ? n -= 1 : n += 1;
 	path.push(n);
     }
     return path.reverse();
+}
+
+function is_even(n) {
+    return !(n % 2);
 }
